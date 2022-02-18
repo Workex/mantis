@@ -1,0 +1,134 @@
+{
+  "mappings": {
+    "properties": {
+      "company_name": {
+        "type": "keyword"
+      },
+      "company_type": {
+        "type": "keyword"
+      },
+      "industry": {
+        "type": "keyword"
+      },
+      "address": {
+        "properties": {
+          "locality": {
+            "type": "text",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "ignore_above": 256
+              }
+            }
+          },
+          "street": {
+            "type": "text",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "ignore_above": 256
+              }
+            }
+          },
+          "city": {
+            "type": "text",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "ignore_above": 256
+              }
+            }
+          },
+          "state": {
+            "type": "text",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "ignore_above": 256
+              }
+            }
+          },
+          "zip": {
+            "type": "text",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "ignore_above": 256
+              }
+            }
+          },
+          "geoCoordinate": {
+            "type": "geo_point"
+          }
+        }
+      },
+      "company_id": {
+        "type": "keyword"
+      },
+      "staff_name": {
+        "type": "keyword"
+      },
+      "staff_id": {
+        "type": "keyword"
+      },
+      "created_at": {
+        "type": "date"
+      },
+      "is_present": {
+        "type": "boolean"
+      },
+      "is_absent": {
+        "type": "boolean"
+      },
+      "on_leave": {
+        "type": "boolean"
+      },
+      "on_half_day_leave": {
+        "type": "boolean"
+      },
+      "is_overtime": {
+        "type": "keyword"
+      },
+      "overtime_hours": {
+        "type": "integer"
+      },
+      "overtime_rate": {
+        "type": "integer"
+      },
+      "punch_in_time": {
+        "type": "date",
+        "format": "hour_minute_second"
+      },
+      "punch_out_time": {
+        "type": "date",
+        "format": "hour_minute_second"
+      },
+      "leave_type": {
+        "type": "keyword"
+      },
+      "is_late_fine": {
+        "type": "boolean"
+      },
+      "late_fine_hours": {
+        "type": "integer"
+      },
+      "late_fine_rate": {
+        "type": "integer"
+      },
+      "total_payout": {
+        "type": "integer"
+      },
+      "marked_by_role": {
+        "type": "keyword"
+      },
+      "actual_punch_in_time": {
+        "type": "date",
+        "format": "hour_minute_second"
+      },
+      "actual_punch_out_time": {
+        "type": "date",
+        "format": "hour_minute_second"
+      }
+    }
+  }
+}

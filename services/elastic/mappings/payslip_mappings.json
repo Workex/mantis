@@ -1,0 +1,124 @@
+{
+  "mappings": {
+    "properties": {
+      "company_name": {
+        "type": "keyword"
+      },
+      "company_id": {
+        "type": "keyword"
+      },
+      "staff_name": {
+        "type": "keyword"
+      },
+      "staff_id": {
+        "type": "keyword"
+      },
+      "payslip_id": {
+        "type": "keyword"
+      },
+      "payout_type": {
+        "type": "keyword"
+      },
+      "final_salary": {
+        "type": "integer"
+      },
+      "payout_date": {
+        "type": "date"
+      },
+      "total_present": {
+        "type": "integer"
+      },
+      "total_leave": {
+        "type": "integer"
+      },
+      "total_absent": {
+        "type": "integer"
+      },
+      "over_time_amount": {
+        "type": "integer"
+      },
+      "paid_by": {
+        "type": "keyword"
+      },
+      "deducted_amount": {
+        "type": "integer"
+      },
+      "late_fine": {
+        "type": "integer"
+      },
+      "bonus": {
+        "type": "integer"
+      },
+      "allowance": {
+        "type": "integer"
+      },
+      "generated_from_date": {
+        "type": "date"
+      },
+      "generated_to_date": {
+        "type": "date"
+      },
+      "pf_amount": {
+        "type": "integer"
+      },
+      "calculated_salary": {
+        "type": "integer"
+      },
+      "esic_amount": {
+        "type": "integer"
+      },
+      "address": {
+        "properties": {
+          "locality": {
+            "type": "text",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "ignore_above": 256
+              }
+            }
+          },
+          "street": {
+            "type": "text",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "ignore_above": 256
+              }
+            }
+          },
+          "city": {
+            "type": "text",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "ignore_above": 256
+              }
+            }
+          },
+          "state": {
+            "type": "text",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "ignore_above": 256
+              }
+            }
+          },
+          "zip": {
+            "type": "text",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "ignore_above": 256
+              }
+            }
+          },
+          "geoCoordinate": {
+            "type": "geo_point"
+          }
+        }
+      }
+    }
+  }
+}

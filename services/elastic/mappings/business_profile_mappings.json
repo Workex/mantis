@@ -1,0 +1,193 @@
+{
+  "mappings": {
+    "properties": {
+      "popular_name": {
+        "type": "keyword"
+      },
+      "industry": {
+        "type": "keyword"
+      },
+      "registered_name": {
+        "type": "text",
+        "fields": {
+          "raw": {
+            "type": "keyword"
+          }
+        }
+      },
+      "is_active": {
+        "type": "boolean"
+      },
+      "organisation_name": {
+        "type": "text",
+        "fields": {
+          "raw": {
+            "type": "keyword"
+          }
+        }
+      },
+      "company_type": {
+        "type": "keyword"
+      },
+      "market_place_company_id": {
+        "type": "keyword"
+      },
+      "base_employee_code": {
+        "type": "keyword"
+      },
+      "total_staff": {
+        "type": "integer"
+      },
+      "active_staff": {
+        "type": "integer"
+      },
+      "pending_staff": {
+        "type": "integer"
+      },
+      "declined_staff": {
+        "type": "integer"
+      },
+      "accepted_staff": {
+        "type": "integer"
+      },
+      "managers": {
+        "properties": {
+          "name": {
+            "type": "keyword"
+          },
+          "user_id": {
+            "type": "keyword"
+          },
+          "employment_type": {
+            "type": "keyword"
+          },
+          "address": {
+          "properties": {
+            "locality": {
+              "type": "text",
+              "fields": {
+                "keyword": {
+                  "type": "keyword",
+                  "ignore_above": 256
+                }
+              }
+            },
+            "street": {
+              "type": "text",
+              "fields": {
+                "keyword": {
+                  "type": "keyword",
+                  "ignore_above": 256
+                }
+              }
+            },
+            "city": {
+              "type": "text",
+              "fields": {
+                "keyword": {
+                  "type": "keyword",
+                  "ignore_above": 256
+                }
+              }
+            },
+            "state": {
+              "type": "text",
+              "fields": {
+                "keyword": {
+                  "type": "keyword",
+                  "ignore_above": 256
+                }
+              }
+            },
+            "zip": {
+              "type": "text",
+              "fields": {
+                "keyword": {
+                  "type": "keyword",
+                  "ignore_above": 256
+                }
+              }
+            },
+            "geoCoordinate": {
+              "type": "geo_point"
+            }
+          }
+      },
+          "mobile_no": {
+            "type": "keyword"
+          },
+          "is_active": {
+            "type": "boolean"
+          },
+          "email": {
+            "type": "keyword"
+          },
+          "employee_id": {
+            "type": "keyword"
+          },
+          "active_from": {
+            "type": "date"
+          },
+          "active_to": {
+            "type": "date"
+          },
+          "user_role": {
+            "type": "keyword"
+          }
+        }
+      },
+      "address": {
+        "properties": {
+          "locality": {
+            "type": "text",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "ignore_above": 256
+              }
+            }
+          },
+          "street": {
+            "type": "text",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "ignore_above": 256
+              }
+            }
+          },
+          "city": {
+            "type": "text",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "ignore_above": 256
+              }
+            }
+          },
+          "state": {
+            "type": "text",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "ignore_above": 256
+              }
+            }
+          },
+          "zip": {
+            "type": "text",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "ignore_above": 256
+              }
+            }
+          },
+          "geoCoordinate": {
+            "type": "geo_point"
+          }
+        }
+      }
+    }
+  }
+}

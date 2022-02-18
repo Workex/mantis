@@ -1,0 +1,146 @@
+{
+  "mappings": {
+    "properties": {
+      "name": {
+        "type": "keyword"
+      },
+      "mobile": {
+        "type": "keyword"
+      },
+      "email": {
+        "type": "keyword"
+      },
+      "is_active": {
+        "type": "keyword"
+      },
+      "employment_type": {
+        "type": "keyword"
+      },
+      "status": {
+        "type": "keyword"
+      },
+      "user_id": {
+        "type": "keyword"
+      },
+      "joining_date": {
+        "type": "date"
+      },
+      "designation": {
+        "type": "keyword"
+      },
+      "payout_type": {
+        "type": "keyword"
+      },
+      "salary": {
+        "type": "integer"
+      },
+      "managed_from_date": {
+        "type": "date"
+      },
+      "attendance_configuration": {
+        "properties": {
+          "attendance_mode": {
+            "type": "keyword"
+          },
+          "in_time": {
+            "type": "date",
+            "format": "hour_minute_second"
+          },
+          "out_time": {
+            "type": "date",
+            "format": "hour_minute_second"
+          },
+          "off_days": {
+            "type": "keyword"
+          }
+        }
+      },
+      "employment_accepted_date": {
+        "type": "date"
+      },
+      "department_name": {
+        "type": "keyword"
+      },
+      "user_role": {
+        "type": "keyword"
+      },
+      "reporting_to": {
+        "type": "keyword"
+      },
+      "company": {
+        "properties": {
+          "name": {
+            "type": "keyword"
+          },
+          "company_id": {
+            "type": "keyword"
+          },
+          "is_active": {
+            "type": "boolean"
+          },
+          "company_type": {
+            "type": "keyword"
+          },
+          "address": {
+        "properties": {
+          "locality": {
+            "type": "text",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "ignore_above": 256
+              }
+            }
+          },
+          "street": {
+            "type": "text",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "ignore_above": 256
+              }
+            }
+          },
+          "city": {
+            "type": "text",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "ignore_above": 256
+              }
+            }
+          },
+          "state": {
+            "type": "text",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "ignore_above": 256
+              }
+            }
+          },
+          "zip": {
+            "type": "text",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "ignore_above": 256
+              }
+            }
+          },
+          "geoCoordinate": {
+            "type": "geo_point"
+          }
+        }
+      },
+          "from_date": {
+            "type": "date"
+          },
+          "to_date": {
+            "type": "date"
+          }
+        }
+      }
+    }
+  }
+}
